@@ -14,6 +14,7 @@ public class Kasir {
 
     public boolean prosesPembayaran(double totalHarga) {
         if (this.saldo >= totalHarga) {
+            // Saldo mencukupi untuk membayar
             this.saldo -= totalHarga;
             System.out.println("Pembayaran berhasil. Sisa saldo: Rp " + this.saldo);
             return true;
