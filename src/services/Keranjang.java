@@ -4,16 +4,20 @@ import java.util.ArrayList;
 import abstracts.Barang;
 
 public class Keranjang {
+    // Atribut
     private ArrayList<Barang> listKeranjang;
 
+    // Constructor
     public Keranjang() {
-        this.listKeranjang = new ArrayList<>();
+        this.listKeranjang = new ArrayList<Barang>();
     }
 
+    // Method
     public void tambahBarang(Barang barang) {
         listKeranjang.add(barang);
     }
 
+    // Getter
     public double getTotalHarga() {
         double total = 0;
         for (Barang barang : listKeranjang) {
@@ -22,6 +26,7 @@ public class Keranjang {
         return total;
     }
 
+    // Method untuk menampilkan keranjang
     public void tampilkanKeranjang() {
         System.out.println("Keranjang Belanja:");
         if (listKeranjang.isEmpty()) {
@@ -34,6 +39,7 @@ public class Keranjang {
         System.out.println("Total Harga: Rp " + getTotalHarga());
     }
 
+    // method untuk mengosongkan keranjang
     public void bersihkan() {
         listKeranjang.clear();
     }

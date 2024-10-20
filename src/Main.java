@@ -44,9 +44,10 @@ public class Main {
             System.out.println("\n1. Tambah Saldo");
             System.out.println("2. Lihat Kategori dan Barang");
             System.out.println("3. Tambah Barang ke Keranjang");
-            System.out.println("4. Lihat Keranjang");
-            System.out.println("5. Bayar");
-            System.out.println("6. Keluar");
+            System.out.println("4. Kosongkan Keranjang");
+            System.out.println("5. Lihat Keranjang");
+            System.out.println("6. Bayar");
+            System.out.println("7. Keluar");
             System.out.print("Pilih: ");
             int pilihan = scanner.nextInt();
 
@@ -164,9 +165,16 @@ public class Main {
                 case 4:
                     ClearScreen.clear();
                     HeaderName.nama();
+                    keranjang.bersihkan();
+                    System.out.println("Keranjang berhasil dikosongkan.");
+                    break;
+
+                case 5:
+                    ClearScreen.clear();
+                    HeaderName.nama();
                     keranjang.tampilkanKeranjang();
                     break;
-                case 5:
+                case 6:
                     ClearScreen.clear();
                     HeaderName.nama();
                     if (keranjang.getTotalHarga() == 0) {
@@ -180,9 +188,10 @@ public class Main {
                         keranjang.bersihkan();
                     }
                     break;
-                case 6:
+                case 7:
                     ClearScreen.clear();
                     HeaderName.nama();
+                    System.out.println("Terima kasih telah menggunakan program ini.");
                     jalan = false;
                     scanner.close();
                     break;

@@ -7,10 +7,10 @@ public class Kategori {
     private String nama;
     private ArrayList<Barang> barangList;
 
-    // setter
+    // Constructor
     public Kategori(String nama) {
         this.nama = nama;
-        this.barangList = new ArrayList<>();
+        this.barangList = new ArrayList<Barang>();
     }
 
     // getter
